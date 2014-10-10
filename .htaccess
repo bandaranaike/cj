@@ -1,4 +1,4 @@
 RewriteEngine on
-RewriteCond $1 !^(index\.php|includes|user_guide|content|robots\.txt)
+RewriteCond $1 !^(index\.php|includes|content|robots\.txt)
 RewriteRule ^(.*)$ index.php/$1 [L]
-RewriteBase /payment_application/
+RewriteBase /crazy_jets/
