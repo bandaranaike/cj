@@ -4,7 +4,7 @@
 */
 html, body{
     height: 100%;
-    font-size: 11pt;
+    font-size: 12px;
 }
 .footer {
     height: 40px;
@@ -18,9 +18,7 @@ html, body{
 }
 .content_wrapper{
     padding-bottom: 42px;
-    max-width: 1000px;
     margin: auto;
-    background: #eee;
 }
 .content_wrapper header{
     height: auto;
@@ -36,12 +34,14 @@ html, body{
     overflow: auto;
 }
 .header_baner{
-    height: 156px;
-    background:skyblue url("http://www.mapquest.com/embed?icid=mqdist_mb_tools&maptype=map&zm=3&cr=-3.3513425926256892,64.33459449347322&projection=sm&showScale=false&format=static&width=1200&height=310")
+}
+.header_logo{
+    padding: 20px 0;
+    float: left;
 }
 .header_links_container{
     float: right;
-    margin: 50px 5px 0 0;
+    margin: 12px 5px 0 0;
 }
 .metro .shortcut.link.big_icon{
     float: left;
@@ -54,25 +54,39 @@ html, body{
     float: left;
 }
 .header_links_nav{
-    border: 1px solid #008a00;
+    border: 1px solid #aaa;
     float: left;
     height: 26px;
     width: 100%;
     width: 315px;
+    background: rgba(255,255,255,0.9);
+}
+.header_links_nav a{
+    float: left;
+    display: block;
+    border-right:1px solid #aaa;
+    height: 25px;
+    padding: 3px 6px;
+}
+.header_links_nav a:last-child{
+    border-right: none;
 }
 .booking_window{
-    min-height: 500px;
-    width: 550px;
-    border: 1px dashed #008a00;
+    min-height: 350px;
+    border: 1px dashed #fff;
     position: relative;
-    margin: -55px 0 0 10px;
     z-index: 4;
-    background: #fff;
+    background: #6f817e;
     padding: 10px;
-    box-shadow: #555 10px;
+    float: left;
+    color: #fff;
 }
 .booking_window_header{
-    border-bottom: 1px dashed #008a00;
     padding: 0 10px 10px;
     margin: 0 -10px;
+    font-size: 16px;
+}
+.slider_content{
+    float: left;
+    //margin: 0 -10px 0 10px;
 }

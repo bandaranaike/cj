@@ -10,66 +10,91 @@
         <link href="<?php echo base_url(); ?>content/css/docs.css" rel="stylesheet">
         <link href="<?php echo base_url(); ?>content/js/prettify/prettify.css" rel="stylesheet">
         <link href="<?php echo base_url(); ?>content/css/styles.css" rel="stylesheet"/>
+        
+        <link href="<?php echo base_url(); ?>content/css/owl.carousel.css" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>content/css/owl.theme.css" rel="stylesheet">
+        
         <script src="<?php echo base_url(); ?>content/js/jquery/jquery.min.js"></script>
         <script src="<?php echo base_url(); ?>content/js/jquery/jquery.widget.min.js"></script>
         <script src="<?php echo base_url(); ?>content/js/jquery/jquery.mousewheel.js"></script>
         <script src="<?php echo base_url(); ?>content/js/prettify/prettify.js"></script>
         <script src="<?php echo base_url(); ?>content/js/metro.min.js"></script>
+        <script src="<?php echo base_url(); ?>content/js/owl.carousel.min.js"></script>
         <script type="text/javascript">
-            var __lc = {};
-            __lc.license = 5047721;
-
-            (function () {
-                var lc = document.createElement('script');
-                lc.type = 'text/javascript';
-                lc.async = true;
-                lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(lc, s);
-            })();
+//            var __lc = {};
+//            __lc.license = 5047721;
+//
+//            (function () {
+//                var lc = document.createElement('script');
+//                lc.type = 'text/javascript';
+//                lc.async = true;
+//                lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+//                var s = document.getElementsByTagName('script')[0];
+//                s.parentNode.insertBefore(lc, s);
+//            })();
         </script>
     </head>
     <body class="metro">
+        <header class="bg-dark">
+            <div class="navigation-bar dark fixed-top shadow">
+                <div class="navigation-bar-content container">
+                    <a class="element" href="/" style="padding: 8px;">
+                        <img src="<?php echo base_url(); ?>content/images/logo.png"/>
+                        <sup>0.1 - Beeta</sup></a>
+                    <span class="element-divider"></span>
+                    <a href="#" class="element1 pull-menu"></a>
+                    <ul class="element-menu">
+                        <li><a href="<?php echo base_url(); ?>company/careers">Careers</a></li>
+                        <li><a href="<?php echo base_url(); ?>support">FAQ</a></li>  
+                        <li><a href="<?php echo base_url(); ?>company/privacy_policies">Privacy Policies</a></li>  
+                        <li><a href="<?php echo base_url(); ?>company/terms_and_conditions">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
         <div class="main-content">
             <div class="content_wrapper">
-                <header>
-                    <div class="header_baner">
-                        This is the header banner
-                        <div class="header_links_container">
-                            <div class="bd-crimson shortcut link big_icon"></div>
-                            <div class="half_icons">
-                                <div class="tile_collection">
-                                    <div class="tile half bg-darkRed">
-                                        <div class="tile-content icon">
-                                            <i class="icon-rocket"></i>
-                                        </div>
-                                    </div>
-                                    <div class="tile half bg-darkRed">
-                                        <div class="tile-content icon">
-                                            <i class="icon-rocket"></i>
-                                        </div>
-                                    </div>
-                                    <div class="tile half bg-darkRed">
-                                        <div class="tile-content icon">
-                                            <i class="icon-rocket"></i>
-                                        </div>
-                                    </div>
-                                    <div class="tile half bg-darkRed">
-                                        <div class="tile-content icon">
-                                            <i class="icon-rocket"></i>
-                                        </div>
-                                    </div>
-                                    <div class="tile half bg-darkRed">
-                                        <div class="tile-content icon">
-                                            <i class="icon-rocket"></i>
-                                        </div>
+                <div class="grid fluid">
+                    <div class="row">
+                        <div class="span5 offset7">
+                            <a href="http://www.twitter.com">
+                                <div class="tile half bg-blue" title="Twitter">
+                                    <div class="tile-content icon">
+                                        <i class="icon-twitter"></i>
                                     </div>
                                 </div>
-                                <div class="header_links_nav"></div>
-                            </div>
+                            </a>
+                            <a href="http://www.facebook.com">
+                                <div class="tile half bg-darkBlue" title="Facebook">
+                                    <div class="tile-content icon">
+                                        <i class="icon-facebook"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="http://www.plus.google.com">
+                                <div class="tile half bg-red" title="Google plus">
+                                    <div class="tile-content icon">
+                                        <i class="icon-google-plus"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="<?php echo base_url(); ?>company">
+                                <div class="tile half bg-yellow" title="About Us">
+                                    <div class="tile-content icon">
+                                        <i class="icon-user-2"></i>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="<?php echo base_url(); ?>company/contacts">
+                                <div class="tile half bg-darkBrown" title="Contacts">
+                                    <div class="tile-content icon">
+                                        <i class="icon-phone"></i>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                </header>
+                </div>
                 <div class=""></div>
-                <div class="container">
+                <div class="container grid">
                     <h1><?php echo isset($title) ? $title : ""; ?></h1>
