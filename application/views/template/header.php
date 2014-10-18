@@ -36,9 +36,9 @@
     </head>
     <body class="metro">
         <header class="bg-dark">
-            <div class="navigation-bar dark fixed-top shadow">
+            <div class="navigation-bar light fixed-top shadow">
                 <div class="navigation-bar-content container">
-                    <a class="element" href="/" style="padding: 8px;">
+                    <a class="element" href="<?php echo base_url(); ?>" style="padding: 8px;">
                         <img src="<?php echo base_url(); ?>content/images/logo.png"/>
                         <sup>0.1 - Beeta</sup></a>
                     <span class="element-divider"></span>
@@ -48,6 +48,13 @@
                         <li><a href="<?php echo base_url(); ?>support">FAQ</a></li>  
                         <li><a href="<?php echo base_url(); ?>company/privacy_policies">Privacy Policies</a></li>  
                         <li><a href="<?php echo base_url(); ?>company/terms_and_conditions">Terms and Conditions</a></li>
+                        <li><a href="#" class="dropdown-toggle">Test</a>
+                            <ul data-role="dropdown" class="dropdown-menu light">
+                                <li><a href="<?php echo base_url(); ?>booking/flight">Flight</a></li>
+                                <li><a href="<?php echo base_url(); ?>booking/hotel">Hotels</a></li>
+                                <li><a href="<?php echo base_url(); ?>booking/vehicle">Vehicle</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>

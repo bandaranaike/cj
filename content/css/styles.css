@@ -88,5 +88,6 @@ html, body{
 }
 .slider_content{
     float: left;
+    width: 100%;
     //margin: 0 -10px 0 10px;
 }

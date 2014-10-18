@@ -126,7 +126,7 @@ curl_setopt($soap_do, CURLOPT_HTTPHEADER, $header);      // Headers sent to the 
 
 <div class="row">
     <div class="booking_window span5">
-        <div class="booking_window_header">Booking</div>
+        <div class="booking_window_header" style="min-width: 30px;">Booking</div>
         <div class="tab-control" data-role="tab-control">
             <ul class="tabs">
                 <li class="active"><a href="#_page_1"><i class="icon-"></i>Flight</a></li>
@@ -135,210 +135,210 @@ curl_setopt($soap_do, CURLOPT_HTTPHEADER, $header);      // Headers sent to the 
             </ul>
             <div class="frames">
                 <div class="frame" id="_page_1">
-                    <form action="">
-                        <label style="width: 48%; margin-right: 3%; float: left">From
-                            <div class="input-control text">
-                                <input type="text">
-                            </div>
+                    <?php echo form_open(base_url() . "booking/flight"); ?>
+                    <label style="width: 48%; margin-right: 3%; float: left">From
+                        <div class="input-control text">
+                            <input type="text" value="">
+                        </div>
+                    </label>
+                    <label style="width: 48%; float: left">To
+                        <div class="input-control text">
+                            <input type="text">
+                        </div>
+                    </label>
+                    <div data-role="input-control" class="input-control switch" style="width: 100%">
+                        <div class="clearfix">
+                            <label style="width: 48%; margin-right: 3%; float: left">Start Date
+                                <div data-week-start="1" data-role="datepicker" class="input-control text">
+                                    <input type="text" readonly="readonly">
+                                    <button class="btn-date"></button>
+                                </div>
+                            </label>
+                            <label style="width: 48%; float: left">End Date
+                                <div data-week-start="1" data-role="datepicker" class="input-control text">
+                                    <input type="text" readonly="readonly">
+                                    <button class="btn-date"></button>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div data-role="input-control" class="input-control radio default-style inline-block">
+                        <label class="inline-block">
+                            <input type="radio" checked="" name="r2">
+                            <span class="check"></span>
+                            Return
                         </label>
-                        <label style="width: 48%; float: left">To
-                            <div class="input-control text">
-                                <input type="text">
-                            </div>
+                        <label class="inline-block">
+                            <input type="radio" name="r2">
+                            <span class="check"></span>
+                            One way
                         </label>
-                        <div data-role="input-control" class="input-control switch" style="width: 100%">
-                            <div class="clearfix">
-                                <label style="width: 48%; margin-right: 3%; float: left">Start Date
-                                    <div data-week-start="1" data-role="datepicker" class="input-control text">
-                                        <input type="text" readonly="readonly">
-                                        <button class="btn-date"></button>
-                                    </div>
-                                </label>
-                                <label style="width: 48%; float: left">End Date
-                                    <div data-week-start="1" data-role="datepicker" class="input-control text">
-                                        <input type="text" readonly="readonly">
-                                        <button class="btn-date"></button>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div data-role="input-control" class="input-control radio default-style inline-block">
-                            <label class="inline-block">
-                                <input type="radio" checked="" name="r2">
-                                <span class="check"></span>
-                                Return
-                            </label>
-                            <label class="inline-block">
-                                <input type="radio" name="r2">
-                                <span class="check"></span>
-                                One way
-                            </label>
-                            <label class="inline-block">
-                                <input type="radio" name="r2">
-                                <span class="check"></span>
-                                Multiple Destinations
-                            </label>
-                        </div>
-                        <div class="input-control select">
-                            <label style="margin-right: 20px; float: left;" class="inline-block">Adults
-                                <select>
-                                    <?php for ($i = 0; $i < 10; $i++) { ?>
-                                        <option <?php echo $i == 1 ? "selected='selected'" : "" ?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </label>
-                            <label style="margin-right: 20px; float: left;" class="inline-block">Children
-                                <select>
-                                    <?php for ($i = 0; $i < 5; $i++) { ?>
-                                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </label>
-                            <label style="margin-right: 20px; float: left;" class="inline-block">Infants
-                                <select>
-                                    <?php for ($i = 0; $i < 4; $i++) { ?>
-                                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </label>
-                            <label style="float: left;" class="inline-block">Class
-                                <select>
-                                    <option>Economy</option>
-                                    <option>Business</option>
-                                    <option>First Class</option>
-                                </select>
-                            </label>
-                        </div>
-                        <div class="input-control select">
+                        <label class="inline-block">
+                            <input type="radio" name="r2">
+                            <span class="check"></span>
+                            Multiple Destinations
+                        </label>
+                    </div>
+                    <div class="input-control select">
+                        <label style="margin-right: 20px; float: left;" class="inline-block">Adults
+                            <select>
+                                <?php for ($i = 0; $i < 10; $i++) { ?>
+                                    <option <?php echo $i == 1 ? "selected='selected'" : "" ?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php } ?>
+                            </select>
+                        </label>
+                        <label style="margin-right: 20px; float: left;" class="inline-block">Children
+                            <select>
+                                <?php for ($i = 0; $i < 5; $i++) { ?>
+                                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php } ?>
+                            </select>
+                        </label>
+                        <label style="margin-right: 20px; float: left;" class="inline-block">Infants
+                            <select>
+                                <?php for ($i = 0; $i < 4; $i++) { ?>
+                                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php } ?>
+                            </select>
+                        </label>
+                        <label style="float: left;" class="inline-block">Class
+                            <select>
+                                <option>Economy</option>
+                                <option>Business</option>
+                                <option>First Class</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="input-control select">
 
-                        </div>
-                        <input type="submit" name="search" value="Search"/>
-                    </form>
+                    </div>
+                    <input type="submit" name="search" value="Search"/>
+                    <?php echo form_close(); ?>
                 </div>
                 <div class="frame" id="_page_2">
-                    <form action="">
-                        <div data-role="input-control" class="input-control switch" style="width: 100%">
-                            <div class="clearfix">
-                                <label style="width: 48%; margin-right: 3%; float: left">Start Date
-                                    <div data-week-start="1" data-role="datepicker" class="input-control text">
-                                        <input type="text" readonly="readonly">
-                                        <button class="btn-date"></button>
-                                    </div>
-                                </label>
-                                <label style="width: 48%; float: left">End Date
-                                    <div data-week-start="1" data-role="datepicker" class="input-control text">
-                                        <input type="text" readonly="readonly">
-                                        <button class="btn-date"></button>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="input-control select">
-                            <label style="margin-right: 20px; float: left;" class="inline-block">Adults
-                                <select>
-                                    <?php for ($i = 0; $i < 10; $i++) { ?>
-                                        <option <?php echo $i == 1 ? "selected='selected'" : "" ?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                    <?php } ?>
-                                </select>
+                    <?php echo form_open(base_url() . "booking/hotel"); ?>
+                    <div data-role="input-control" class="input-control switch" style="width: 100%">
+                        <div class="clearfix">
+                            <label style="width: 48%; margin-right: 3%; float: left">Start Date
+                                <div data-week-start="1" data-role="datepicker" class="input-control text">
+                                    <?php echo form_input('username', 'johndoe'); ?>
+                                    <button class="btn-date"></button>
+                                </div>
                             </label>
-                            <label style="margin-right: 20px; float: left;" class="inline-block">Children
-                                <select>
-                                    <?php for ($i = 0; $i < 5; $i++) { ?>
-                                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </label>
-                            <label style="margin-right: 20px; float: left;" class="inline-block">Infants
-                                <select>
-                                    <?php for ($i = 0; $i < 4; $i++) { ?>
-                                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </label>
-                            <label style="float: left;" class="inline-block">Class
-                                <select>
-                                    <option>Economy</option>
-                                    <option>Luxury</option>
-                                    <option>First Class</option>
-                                </select>
+                            <label style="width: 48%; float: left">End Date
+                                <div data-week-start="1" data-role="datepicker" class="input-control text">
+                                    <input type="text" readonly="readonly">
+                                    <button class="btn-date"></button>
+                                </div>
                             </label>
                         </div>
-                        <div class="input-control select">
+                    </div>
+                    <div class="input-control select">
+                        <label style="margin-right: 20px; float: left;" class="inline-block">Adults
+                            <select>
+                                <?php for ($i = 0; $i < 10; $i++) { ?>
+                                    <option <?php echo $i == 1 ? "selected='selected'" : "" ?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php } ?>
+                            </select>
+                        </label>
+                        <label style="margin-right: 20px; float: left;" class="inline-block">Children
+                            <select>
+                                <?php for ($i = 0; $i < 5; $i++) { ?>
+                                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php } ?>
+                            </select>
+                        </label>
+                        <label style="margin-right: 20px; float: left;" class="inline-block">Infants
+                            <select>
+                                <?php for ($i = 0; $i < 4; $i++) { ?>
+                                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php } ?>
+                            </select>
+                        </label>
+                        <label style="float: left;" class="inline-block">Class
+                            <select>
+                                <option>Economy</option>
+                                <option>Luxury</option>
+                                <option>First Class</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="input-control select">
 
-                        </div>
-                        <input type="submit" name="search" value="Search"/>
-                    </form>
+                    </div>
+                    <input type="submit" name="search" value="Search"/>
+                    <?php echo form_close(); ?>
                 </div>
                 <div class="frame" id="_page_3">
-                    <form action="">
-                        <label style="width: 48%; margin-right: 3%; float: left">From
-                            <div class="input-control text">
-                                <input type="text">
-                            </div>
-                        </label>
-                        <label style="width: 48%; float: left">To
-                            <div class="input-control text">
-                                <input type="text">
-                            </div>
-                        </label>
-                        <div data-role="input-control" class="input-control switch" style="width: 100%">
-                            <div class="clearfix">
-                                <label style="width: 48%; margin-right: 3%; float: left">Start Date
-                                    <div data-week-start="1" data-role="datepicker" class="input-control text">
-                                        <input type="text" readonly="readonly">
-                                        <button class="btn-date"></button>
-                                    </div>
-                                </label>
-                                <label style="width: 48%; float: left">End Date
-                                    <div data-week-start="1" data-role="datepicker" class="input-control text">
-                                        <input type="text" readonly="readonly">
-                                        <button class="btn-date"></button>
-                                    </div>
-                                </label>
-                            </div>
+                    <?php echo form_open(base_url() . "booking/vehicle"); ?>
+                    <label style="width: 48%; margin-right: 3%; float: left">From
+                        <div class="input-control text">
+                            <input type="text">
                         </div>
-                        <div class="input-control select">
-                            <label style="margin-right: 20px; float: left;" class="inline-block">Adults
-                                <select>
-                                    <?php for ($i = 0; $i < 10; $i++) { ?>
-                                        <option <?php echo $i == 1 ? "selected='selected'" : "" ?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                    <?php } ?>
-                                </select>
+                    </label>
+                    <label style="width: 48%; float: left">To
+                        <div class="input-control text">
+                            <input type="text">
+                        </div>
+                    </label>
+                    <div data-role="input-control" class="input-control switch" style="width: 100%">
+                        <div class="clearfix">
+                            <label style="width: 48%; margin-right: 3%; float: left">Start Date
+                                <div data-week-start="1" data-role="datepicker" class="input-control text">
+                                    <input type="text" readonly="readonly">
+                                    <button class="btn-date"></button>
+                                </div>
                             </label>
-                            <label style="margin-right: 20px; float: left;" class="inline-block">Children
-                                <select>
-                                    <?php for ($i = 0; $i < 5; $i++) { ?>
-                                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </label>
-                            <label style="margin-right: 20px; float: left;" class="inline-block">Infants
-                                <select>
-                                    <?php for ($i = 0; $i < 4; $i++) { ?>
-                                        <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                                    <?php } ?>
-                                </select>
-                            </label>
-                            <label style="float: left;" class="inline-block">Class
-                                <select>
-                                    <option>Economy</option>
-                                    <option>Business</option>
-                                    <option>First Class</option>
-                                </select>
+                            <label style="width: 48%; float: left">End Date
+                                <div data-week-start="1" data-role="datepicker" class="input-control text">
+                                    <input type="text" readonly="readonly">
+                                    <button class="btn-date"></button>
+                                </div>
                             </label>
                         </div>
-                        <div class="input-control select">
+                    </div>
+                    <div class="input-control select">
+                        <label style="margin-right: 20px; float: left;" class="inline-block">Adults
+                            <select>
+                                <?php for ($i = 0; $i < 10; $i++) { ?>
+                                    <option <?php echo $i == 1 ? "selected='selected'" : "" ?> value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php } ?>
+                            </select>
+                        </label>
+                        <label style="margin-right: 20px; float: left;" class="inline-block">Children
+                            <select>
+                                <?php for ($i = 0; $i < 5; $i++) { ?>
+                                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php } ?>
+                            </select>
+                        </label>
+                        <label style="margin-right: 20px; float: left;" class="inline-block">Infants
+                            <select>
+                                <?php for ($i = 0; $i < 4; $i++) { ?>
+                                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                <?php } ?>
+                            </select>
+                        </label>
+                        <label style="float: left;" class="inline-block">Class
+                            <select>
+                                <option>Economy</option>
+                                <option>Business</option>
+                                <option>First Class</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="input-control select">
 
-                        </div>
-                        <input type="submit" name="search" value="Search"/>
-                    </form>
+                    </div>
+                    <input type="submit" name="search" value="Search"/>
+                    <?php echo form_close(); ?>
                 </div>
             </div>
         </div>    
     </div>
     <div class="span7">
         <div class="slider_content">
-            <div data-role="live-tile" class="tile quadro live" style="height: 200px">
+            <div data-role="live-tile" class="tile quadro live" style="height: 200px;">
                 <div class="tile-content image" style="background: #0067cb"></div>
                 <div class="tile-content image" style="background: #ca5716"></div>
                 <div class="tile-content image" style="background: #36ca16"></div>
@@ -367,7 +367,9 @@ curl_setopt($soap_do, CURLOPT_HTTPHEADER, $header);      // Headers sent to the 
         </div>
     </div>
 </div>
-
+<div class="row">
+    <div class="span12">This is the content</div>
+</div>
 <script>
     $(document).ready(function () {
         $("#owl-demo").owlCarousel({
@@ -378,15 +380,15 @@ curl_setopt($soap_do, CURLOPT_HTTPHEADER, $header);      // Headers sent to the 
     });
 </script>
 <style>
-    
+
 
     #owl-demo .item{
-    margin: 3px;
+        margin: 3px;
     }
     #owl-demo .item img{
-    display: block;
-    width: 100%;
-    height: auto;
+        display: block;
+        width: 100%;
+        height: auto;
     }
 
 
