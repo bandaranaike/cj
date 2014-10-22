@@ -10,10 +10,10 @@
         <link href="<?php echo base_url(); ?>content/css/docs.css" rel="stylesheet">
         <link href="<?php echo base_url(); ?>content/js/prettify/prettify.css" rel="stylesheet">
         <link href="<?php echo base_url(); ?>content/css/styles.css" rel="stylesheet"/>
-        
+
         <link href="<?php echo base_url(); ?>content/css/owl.carousel.css" rel="stylesheet">
         <link href="<?php echo base_url(); ?>content/css/owl.theme.css" rel="stylesheet">
-        
+
         <script src="<?php echo base_url(); ?>content/js/jquery/jquery.min.js"></script>
         <script src="<?php echo base_url(); ?>content/js/jquery/jquery.widget.min.js"></script>
         <script src="<?php echo base_url(); ?>content/js/jquery/jquery.mousewheel.js"></script>
@@ -61,47 +61,47 @@
         </header>
         <div class="main-content">
             <div class="content_wrapper">
-                <div class="grid fluid">
-                    <div class="row">
-                        <div class="span5 offset7">
-                            <a href="http://www.twitter.com">
-                                <div class="tile half bg-blue" title="Twitter">
-                                    <div class="tile-content icon">
-                                        <i class="icon-twitter"></i>
+                <!--                <div class="container grid">
+                                    <div class="row">
+                                        <div class="span5 offset9 right">
+                                            <a href="http://www.twitter.com" class="right">
+                                                <div class="tile half bg-blue" title="Twitter">
+                                                    <div class="tile-content icon">
+                                                        <i class="icon-twitter"></i>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="http://www.facebook.com">
+                                                <div class="tile half bg-darkBlue" title="Facebook">
+                                                    <div class="tile-content icon">
+                                                        <i class="icon-facebook"></i>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="http://www.plus.google.com">
+                                                <div class="tile half bg-red" title="Google plus">
+                                                    <div class="tile-content icon">
+                                                        <i class="icon-google-plus"></i>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="<?php echo base_url(); ?>company">
+                                                <div class="tile half bg-yellow" title="About Us">
+                                                    <div class="tile-content icon">
+                                                        <i class="icon-user-2"></i>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="<?php echo base_url(); ?>company/contacts">
+                                                <div class="tile half bg-darkBrown" title="Contacts">
+                                                    <div class="tile-content icon">
+                                                        <i class="icon-phone"></i>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
-                            <a href="http://www.facebook.com">
-                                <div class="tile half bg-darkBlue" title="Facebook">
-                                    <div class="tile-content icon">
-                                        <i class="icon-facebook"></i>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="http://www.plus.google.com">
-                                <div class="tile half bg-red" title="Google plus">
-                                    <div class="tile-content icon">
-                                        <i class="icon-google-plus"></i>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="<?php echo base_url(); ?>company">
-                                <div class="tile half bg-yellow" title="About Us">
-                                    <div class="tile-content icon">
-                                        <i class="icon-user-2"></i>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="<?php echo base_url(); ?>company/contacts">
-                                <div class="tile half bg-darkBrown" title="Contacts">
-                                    <div class="tile-content icon">
-                                        <i class="icon-phone"></i>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                                </div>-->
+                <div class="container">
+                    <h1 style="margin: 25px 0 28px"><?php echo isset($title) ? $title : ""; ?></h1>
                 </div>
-                <div class=""></div>
-                <div class="container grid">
-                    <h1><?php echo isset($title) ? $title : ""; ?></h1>

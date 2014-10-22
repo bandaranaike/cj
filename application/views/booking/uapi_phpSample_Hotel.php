@@ -14,16 +14,16 @@
 * This code is for illustration purposes only.
 * Schema used (UAPI_6.0) 
 */
-$TARGETBRANCH = '';
-$USERNAME = 'Universal API/..';
-$PASSWORD = '';
+$TARGETBRANCH = 'P107488';
+$USERNAME = 'Universal API/uAPI3328713833-136749ba';
+$PASSWORD = 'STKrWQeGkpfAeZRfTgFAg43gm';
 $CREDENTIALS = $USERNAME.":".$PASSWORD; 
 //
 // Sample Hotel Search request parameters:
 //
 $LOCATION = 'DEN'; // Hotel Location
-$CHECKINDATE = '2014-06-15'; // Checkin Date
-$CHECKOUTDATE = '2014-06-30'; // Checkout Date
+$CHECKINDATE = '2014-11-15'; // Checkin Date
+$CHECKOUTDATE = '2014-11-30'; // Checkout Date
 
 //
 // This is the SOAP request
@@ -83,4 +83,9 @@ print_r(curl_getinfo($soap_do));
 //	
 // Official PHP CURL manual; http://php.net/manual/en/book.curl.php
 //
+
+$xml = new SimpleXMLElement($return);
+foreach($xml->xpath('//soap:body') as $header) {
+    $output = $header->registerXPathNamespace('default', 'http://FpwebBox.Fareportal.com/Gateway.asmx');    
+}
 ?>

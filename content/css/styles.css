@@ -91,3 +91,14 @@ html, body{
     width: 100%;
     //margin: 0 -10px 0 10px;
 }
+.first_row{
+    background: #fff;
+}
+.input-control.select select{
+    padding: 7px !important;
+    font-family: "Segoe UI_","Open Sans",Verdana,Arial,Helvetica,sans-serif;
+}
+.input-control input{
+    font-family: "Segoe UI_","Open Sans",Verdana,Arial,Helvetica,sans-serif;
+    padding: 5px 10px !important;
+}
