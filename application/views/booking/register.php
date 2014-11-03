@@ -11,8 +11,8 @@
 </div>
 <div class="container grid">
     <?php
-    echo form_open(base_url() . "booking/payment");
-    echo form_hidden($registered);
+    echo form_open(base_url() . "booking/booking_plane");
+    echo ($registered);
     ?>
 
     <div class="row">
@@ -23,24 +23,32 @@
         </div>
         <div class="span5">
             <div class="input-control text">
-                <input type="text" name="first_name" placeholder="First name"/>
+                <input type="text" name="first_name" value="<?php echo is_array($user) ? $user['first_name'] : ""; ?>" placeholder="First name"/>
             </div>
         </div>
         <div class="span5">
             <div class="input-control text">
-                <input type="text" name="last_name" placeholder="Last name"/>
+                <input type="text" name="last_name" value="<?php echo is_array($user) ? $user['last_name'] : ""; ?>" placeholder="Last name"/>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="span5 offset2">
             <div class="input-control text">
-                <input type="text" name="id_number" placeholder="ID Number"/>
+                <input type="text" name="email" placeholder="Email"/>
             </div>
         </div>
         <div class="span5">
             <div class="input-control text">
                 <input type="text" name="mobile_number" placeholder="Mobile"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span5 offset2">
+            <div data-week-start="1" data-format="yyyy-mm-dd" data-role="datepicker" class="input-control text">
+                <input type="text" name="date_of_birth" placeholder="Dath of birth"/>
+                <button class="btn-date"></button>
             </div>
         </div>
     </div>
