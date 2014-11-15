@@ -1,0 +1,47 @@
+<SOAP:Envelope xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/">
+    <SOAP:Body>
+        <air:LowFareSearchRsp TraceId="STKrWQeGkpfAeZRfTgFAg43gm" TransactionId="74818B130A07643C15CFCAC367B37E5C" ResponseTime="3702" DistanceUnits="MI" CurrencyType="AUD" xmlns:air="http://www.travelport.com/schema/air_v26_0" xmlns:common_v26_0="http://www.travelport.com/schema/common_v26_0">
+            
+            
+            <air:FlightDetailsList>
+                <air:FlightDetails Key="Uwgs5Tr/Q7ydbn0npAtBPg==" Origin="MUC" Destination="BCN" DepartureTime="2014-11-09T06:35:00.000+01:00" ArrivalTime="2014-11-09T08:40:00.000+01:00" FlightTime="125" TravelTime="125" Distance="681" Equipment="319" OriginTerminal="2" DestinationTerminal="1"/>
+            </air:FlightDetailsList>
+           
+
+            <air:AirSegmentList>
+                <air:AirSegment Key="fpdQYAEHQNS2IxkoG1MpQw==" Group="0" Carrier="LH" FlightNumber="1808" Origin="MUC" Destination="BCN" DepartureTime="2014-11-09T06:35:00.000+01:00" ArrivalTime="2014-11-09T08:40:00.000+01:00" FlightTime="125" Distance="681" ETicketability="Yes" Equipment="319" ChangeOfPlane="false" ParticipantLevel="Airline Source" OptionalServicesIndicator="false" AvailabilitySource="AvailStatusTTY">
+                    <air:AirAvailInfo ProviderCode="1P">
+                        <air:BookingCodeInfo BookingCounts="T9"/>
+                    </air:AirAvailInfo>
+                    <air:FlightDetailsRef Key="Uwgs5Tr/Q7ydbn0npAtBPg=="/>
+                </air:AirSegment>
+            </air:AirSegmentList>
+           
+
+            <air:AirPricingSolution Key="PnrZvhyFSUC3uI+x5kcv6Q==" TotalPrice="AUD304.70" BasePrice="AUD154.00" ApproximateTotalPrice="AUD304.70" ApproximateBasePrice="AUD154.00" Taxes="AUD150.70" ApproximateTaxes="AUD150.70">
+                <air:Journey TravelTime="P0DT2H5M0S">
+                    <air:AirSegmentRef Key="fpdQYAEHQNS2IxkoG1MpQw=="/>
+                </air:Journey>
+                <air:Journey TravelTime="P0DT2H0M0S">
+                    <air:AirSegmentRef Key="zT4W9eWDSBK2eLfr3VLIYQ=="/>
+                </air:Journey>
+                <air:LegRef Key="WIRsoYzxQ6CxC2ybzv/U4g=="/>
+                <air:LegRef Key="GSeo8Zy/TcSN0pQyJ6BSQA=="/>
+                <air:AirPricingInfo Key="RQVVnWYBS7SiPf0HDG0Urg==" TotalPrice="AUD304.70" BasePrice="AUD154.00" ApproximateTotalPrice="AUD304.70" ApproximateBasePrice="AUD154.00" Taxes="AUD150.70" LatestTicketingTime="2014-11-04T23:59:00.000+00:00" PricingMethod="Auto" ETicketability="Yes" PlatingCarrier="LH" ProviderCode="1P">
+                    <air:FareInfoRef Key="vJ9DP4ZmSmqIKCOmYf8y3Q=="/>
+                    <air:FareInfoRef Key="Q2l7/1cmRmq6hOzHM4kH9Q=="/>
+                    <air:BookingInfo BookingCode="T" CabinClass="Economy" FareInfoRef="vJ9DP4ZmSmqIKCOmYf8y3Q==" SegmentRef="fpdQYAEHQNS2IxkoG1MpQw=="/>
+                    <air:BookingInfo BookingCode="T" CabinClass="Economy" FareInfoRef="Q2l7/1cmRmq6hOzHM4kH9Q==" SegmentRef="zT4W9eWDSBK2eLfr3VLIYQ=="/>
+                    <air:TaxInfo Category="DE" Amount="AUD8.60"/>
+                    <air:TaxInfo Category="OY" Amount="AUD11.60"/>
+                    <air:TaxInfo Category="RA" Amount="AUD29.60"/>
+                    <air:TaxInfo Category="JD" Amount="AUD23.60"/>
+                    <air:TaxInfo Category="OG" Amount="AUD0.90"/>
+                    <air:TaxInfo Category="QV" Amount="AUD5.80"/>
+                    <air:TaxInfo Category="YQ" Amount="AUD70.60"/>
+                    <air:PassengerType Code="ADT"/>
+                </air:AirPricingInfo>
+            </air:AirPricingSolution>
+        </air:LowFareSearchRsp>
+    </SOAP:Body>
+</SOAP:Envelope>
